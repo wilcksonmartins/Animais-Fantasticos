@@ -1,0 +1,6 @@
+const selecionadoUl = document.querySelector("ul")
+console.log(selecionadoUl)
+const primeiroLi = selecionadoUl.querySelector("li")
+console.log(primeiroLi)
+const linkInternos = document.querySelector("[href^='#']")
+console.log(linkInternos)
