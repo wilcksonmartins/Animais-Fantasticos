@@ -176,7 +176,8 @@ body{
     margin-right: 1rem;
   }
   .titulo{
-    margin-left: 2rem;
+    margin-left: 1.5rem;
+    font-size: 5.5rem;
   }
   .menu {
     margin-top: 0px;
