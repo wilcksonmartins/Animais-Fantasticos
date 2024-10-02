@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.className += ' js'</script>
   <link rel="stylesheet" href="./style.css">
   <title>Animais Fantasticos</title>
 </head>
@@ -13,7 +14,7 @@
   <nav class="menu azul">
     <ul>
       <li>
-        <a href="#animais">Animais</a>
+        <a class="ativo" href="#animais">Animais</a>
       </li>
       <li>
         <a href="#faq   ">Faq</a>
@@ -29,7 +30,7 @@
   </nav>
   <section class="grid-section animais" id="animais" data-texto="alo">
     <h1 class="titulo">Animais Fantasticos</h1>
-    <ul class="lista-animais">
+    <ul class="lista-animais js-tabmenu">
       <li>
         <img src="./img/imagem1.jpg" alt="aaa">
       </li>
@@ -49,7 +50,7 @@
         <img src="./img/imagem6.jpg" alt="">
       </li>
     </ul>
-    <div class="animais-descricao">
+    <div class="animais-descricao js-tabcontent">
       <section>
         <h2>raposa</h2>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio libero animi corporis, assumenda temporibus beatae itaque perspiciatis officiis excepturi voluptates placeat molestias facere praesentium aut repudiandae voluptas id inventore a.</p>

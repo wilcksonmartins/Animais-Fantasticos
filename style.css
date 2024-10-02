@@ -3,6 +3,9 @@
   margin: 0;
   list-style:none;
 }
+html.textoMaior{
+  font-size: 25px;
+}
 img{
   display: block;
   max-width: 100%;
@@ -71,6 +74,9 @@ body{
 }
 .animais .lista-animais{
   grid-column: 2 ;
+}
+.animais .lista-animais li{
+  cursor: pointer;
 }
 .lista-animais::-webkit-scrollbar{
   width: 18px;
@@ -159,6 +165,7 @@ body{
   }
   .animais .lista-animais{
     grid-column: 1;
+  
   }
   .faq .faq-lista{
     grid-column: 1 /3;
@@ -185,5 +192,22 @@ body{
   .rodape{
     grid-column: 1 / 3;
     margin-bottom: 1rem;
+  }
+}
+.js .js-tabcontent section {
+  display: none;
+}
+.js .js-tabcontent section.ativo {
+  display: block;
+  animation:show .5s forwards;
+}
+@keyframes show {
+  from{
+    opacity: 0;
+    transform: translate3d(-300px,0,0)
+  }
+  to{
+    opacity: 1;
+    transform: translate3d(0,0,0);
   }
 }
