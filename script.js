@@ -68,3 +68,26 @@ function scrollSuave(){
   
 }
 scrollSuave()
+// inicio animaçao scroll
+function initAnimacaoScroll(){
+  const sections = document.querySelectorAll(".js-scroll")
+  if(sections.length){
+    const windowMetade = window.innerHeight * 0.6;
+    console.log(windowMetade)
+    function animaScroll(){
+      sections.forEach((section)=>{
+        const sectionTopo = section.getBoundingClientRect().top
+       const isSectionVisible = (sectionTopo - windowMetade) < 0
+        if(isSectionVisible ){
+          section.classList.add('ativo')
+        }else{
+          section.classList.remove("ativo")
+        }
+       })
+    }
+    animaScroll()
+    window.addEventListener('scroll',animaScroll)
+  }
+}
+initAnimacaoScroll()
+
