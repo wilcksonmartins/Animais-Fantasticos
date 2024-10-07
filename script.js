@@ -37,30 +37,34 @@ function initAccordion(){
 initAccordion()
 
 // scroll suave link interno
-const linksInternos = document.querySelectorAll('.js-menu a[href^="#"]')
+function scrollSuave(){
+  const linksInternos = document.querySelectorAll('.js-menu a[href^="#"]')
 
-function scrollToSection(event){
-  event.preventDefault();
-  const href = event.currentTarget.getAttribute("href");
-  const section = document.querySelector(href)
-  const topo = section.offsetTop
-  console.log(topo)
-  // forma alternativa
-//   window.scrollTo({
-//     top:topo,
-//     behavior:'smooth',
-//   })
-// }
-  section.scrollIntoView({
-    behavior:'smooth',
-    block: 'start',
-  })
-
+  function scrollToSection(event){
+    event.preventDefault();
+    const href = event.currentTarget.getAttribute("href");
+    const section = document.querySelector(href)
+    const topo = section.offsetTop
+    console.log(topo)
+    // forma alternativa
+  //   window.scrollTo({
+  //     top:topo,
+  //     behavior:'smooth',
+  //   })
+  // }
+    section.scrollIntoView({
+      behavior:'smooth',
+      block: 'start',
+    })
+  
+  }
+  
+  
+  
+   linksInternos.forEach((link)=>{
+    link.addEventListener('click',scrollToSection)
+   })
+  console.log(linksInternos)
+  
 }
-
-
-
- linksInternos.forEach((link)=>{
-  link.addEventListener('click',scrollToSection)
- })
-console.log(linksInternos)
+scrollSuave()
